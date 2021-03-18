@@ -1008,7 +1008,7 @@ DeleteItem.addActionListener(new java.awt.event.ActionListener() {
 
                         String sql = "Insert into SOLD_PRODUCT"
                                 + "(ProductId, ProductName, ProductQuantity, SellingPrice, SellingDate, PhoneNumber, InvoiceID, SoldBy, PaymentType)"
-                                + "values(?, ?, ?, ?, ?, ?, ?, ?, ?";
+                                + "values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
                         String sql1 = "UPDATE CURRENT_STOCK SET ProductQuantity=ProductQuantity -" + quantity + "WHERE ProductId='" + productID + "'";
                       
@@ -1264,8 +1264,8 @@ DeleteItem.addActionListener(new java.awt.event.ActionListener() {
                     // Connection con1 = DriverManager.getConnection(url);
 
                     String sql = "Insert into SOLD_PRODUCT"
-                            + "(ProductId, ProductName, ProductQuantity, SellingPrice, SellingDate, PhoneNumber, InvoiceID, SoldBy, PaymentType, VatTotal)"
-                            + "values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                            + "(ProductId, ProductName, ProductQuantity, SellingPrice, SellingDate, PhoneNumber, InvoiceID, SoldBy, PaymentType)"
+                            + "values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
                     String sql1 = "UPDATE CURRENT_STOCK SET ProductQuantity=ProductQuantity -" + quantity + "WHERE ProductId='" + productID + "'";
 
@@ -1292,7 +1292,7 @@ DeleteItem.addActionListener(new java.awt.event.ActionListener() {
                     pst.setInt(7, INVOICE_NUMBER);
                     pst.setString(8, Admin);
                     pst.setString(9, Pay_Type);
-                    pst.setFloat(10, temp);
+                    //pst.setFloat(10, temp);
                     // String dt=EntryDate.getText().toString();
 
                     //  pst.setString(8, companyName.getText().toString());
@@ -1345,7 +1345,7 @@ DeleteItem.addActionListener(new java.awt.event.ActionListener() {
          } else{
                 JOptionPane.showMessageDialog(null, "INVALID PRICE AND QUANTITY");
             }
-          
+         
            
 }
         
